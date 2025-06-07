@@ -1,0 +1,18 @@
+<!-- templates/log.html -->
+{% extends 'base.html' %}
+{% block title %}Logs{% endblock %}
+{% block content %}
+<h2 class="mb-4">🗂️ Histórico de Notificações</h2>
+
+{% if logs %}
+  <ul class="list-group">
+    {% for log in logs %}
+      <li class="list-group-item">
+        <strong>{{ log['canal'] }}</strong> | {{ log['mensagem'] }} | {{ log['status'] }} | {{ log['usuario'] }}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Nenhuma notificação enviada ainda.</p>
+{% endif %}
+{% endblock %}

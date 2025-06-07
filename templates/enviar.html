@@ -1,0 +1,27 @@
+<!-- templates/enviar.html -->
+{% extends 'base.html' %}
+{% block title %}Enviar Notificação{% endblock %}
+{% block content %}
+<h2 class="mb-4">✉️ Enviar Notificação</h2>
+
+<form method="post">
+  <div class="mb-3">
+    <label for="usuario" class="form-label">Nome do Usuário</label>
+    <input type="text" name="usuario" id="usuario" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label for="canal" class="form-label">Canal</label>
+    <select name="canal" id="canal" class="form-select" required>
+      <option value="email">Email</option>
+      <option value="sms">SMS</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="mensagem" class="form-label">Mensagem</label>
+    <textarea name="mensagem" id="mensagem" class="form-control" required></textarea>
+  </div>
+  <div class="d-grid">
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+<!-- templates/index.html -->
+{% extends 'base.html' %}
+{% block title %}Início{% endblock %}
+{% block content %}
+<h2 class="mb-4">📨 Envio de Notificações</h2>
+
+<div class="d-grid gap-3 col-6 mx-auto">
+  <a class="btn btn-primary" href="{{ url_for('enviar_notificacao') }}">Enviar Notificação</a>
+  <a class="btn btn-secondary" href="{{ url_for('ver_logs') }}">Visualizar Logs</a>
+</div>
+{% endblock %}
